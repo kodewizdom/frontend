@@ -1,21 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     height: 100%;
     width: 100%;
     background-color: #f8f7f4;
 }
 
-#section1{
-    height: 100vh;
+#section1 {
+    /* height: 100vh; */
     width: 100%;
 }
 
-#nav{
+/*----- Navbar -----*/
+
+#nav {
     height: 100px;
     width: 100%;
     display: flex;
@@ -25,39 +28,47 @@ html, body{
     font-family: "Mona Sans ExtraLight";
     font-size: 14px;
 }
-#nav1{
+
+#nav1 {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-#nav1 i{
+
+#nav1 i {
     display: none;
     font-size: 20px;
 }
-#logo{
+
+#logo {
     height: 50px;
     position: relative;
     top: -5px;
 }
-#links ul{
+
+#links ul {
     display: flex;
 }
-#links ul li{
+
+#links ul li {
     list-style: none;
 }
-#links a{
+
+#links a {
     color: black;
     text-decoration: none;
     padding: 0 16px;
     font-weight: 900;
 }
-#login{
+
+#login {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 25px;
 }
-#input{
+
+#input {
     display: flex;
     align-items: center;
     gap: 9px;
@@ -70,43 +81,47 @@ html, body{
     opacity: 0.7;
 }
 
-#myInput{
+#myInput {
     font-size: 18px;
     border: none;
     width: 100%;
     display: none;
 }
+
 #myInput:focus {
     outline: none;
 }
 
-button{
+button {
     border: none;
     background-color: transparent;
 }
-.log{
+
+.log {
     display: none;
 }
 
-.btn{
+.btn {
     background-color: #0D0C22;
     border-radius: 999px;
     color: #fff;
     padding: 17px 24px;
 }
 
-.btn2{
+.btn2 {
     margin-top: 32px;
 }
 
-#hero{
+/*----- Hero -----*/
+
+#hero {
     width: 100%;
-    padding-top:80px;
+    padding-top: 80px;
     font-family: "Mona Sans ExtraLight";
-    color:#0D0C22;
+    color: #0D0C22;
 }
 
-#hero__content{
+#hero__content {
     height: calc(100% - 100px);
     width: 100%;
     text-align: center;
@@ -120,7 +135,7 @@ button{
     overflow: hidden;
 }
 
-#badge{
+#badge {
     font-family: "Source Serif 4", Georgia, serif;
     width: 383px;
     height: 40px;
@@ -135,7 +150,7 @@ button{
     animation: badge-color-cycle 32s linear infinite
 }
 
-#hero__content h1{
+#hero__content h1 {
     margin: 40px auto 24px;
     font-family: "Source Serif 4", Georgia, serif;
     font-weight: 400;
@@ -145,7 +160,7 @@ button{
     line-height: 76px;
 }
 
-#hero__content h4{
+#hero__content h4 {
     font-size: 20px;
 }
 
@@ -174,30 +189,131 @@ button{
 
 
 @media (max-width:950px) {
-    #links{
+    #links {
         display: none;
     }
-    
-    #nav1 i{
+
+    #nav1 i {
         display: block;
     }
-    
+
 }
 
 @media (min-width:950px) {
-    .log{
+    .log {
         display: block;
     }
 }
 
-@media (min-width:1060px){
-    #input{
+@media (min-width:1060px) {
+    #input {
         height: 58px;
         width: 220px;
         background: #fff;
     }
-    #myInput{
+
+    #myInput {
         display: block;
     }
 }
 
+
+/*----- hero bottom -----*/
+
+#bottom {
+    height: 484px;
+    width: 100%;
+    /* background-color: red; */
+    padding: 72px 0;
+    position: relative;
+    z-index: 2;
+    overflow-X: hidden;
+}
+
+#bottom-track {
+    width: fit-content;
+    animation: marquee-desktop 12s linear infinite;
+}
+
+#bottom_elem_grid {
+    display: grid;
+    grid-auto-columns: min-content;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(7, 273px);
+    width: fit-content;
+    gap: 32px;
+}
+
+.elem {
+    border-radius: 30px;
+    background-color: #0D0C22;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.elem-info{
+    padding: 16px 20px;
+    display: grid;
+    position: absolute;
+    z-index: 2;
+    grid-auto-flow: row;
+    grid-auto-rows: min-content;
+    align-content: flex-end;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    user-select: none;
+    gap: 8px;
+    bottom: 0;
+}
+
+.elem-media{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 273px;
+    height: 340px;
+}
+
+.tags{
+    display: grid;
+    grid-auto-columns: min-content;
+    grid-auto-flow: column;
+    gap: 8px;
+    margin-top: 4px;
+    list-style: none;
+}
+
+.tag{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    padding: 0 9px 2px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 9999999px;
+    font-size: 11px;
+    white-space: nowrap
+}
+
+.elem-media video, .elem-media img{
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes marquee-desktop {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    
+    100% {
+        transform: translate3d(calc(-50% - 16px), 0, 0);
+    }
+}
+
+/*----- Section 2 -----*/
+#section2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffda79;
+}
