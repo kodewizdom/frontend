@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gilroy';
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.page1 {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.page2 {
+  background-color: rgb(99, 162, 214);
+  text-align: center;
+  height: 160vh;
+}
+.text{
+  width: 100%;
+  height: 100vh;
+}
+
+.text h1  {
+  font-size: 30vw;
+  font-weight: 300;
+  color: black;
+  text-transform: uppercase;
+  /* text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; */
+
+  /* text-shadow: h-shadow v-shadow blur-radius color; */
+
+  text-shadow: 5px 2px 0 #ffffff, 0 0 0 #ffffff;
+
+}
+ul{
+  list-style-type: none;
+  height: 60vh;
+}
+
+.list-horizontal-text {
+  --font-size-title: 2.6rem;
+  --font-size-text: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7rem;
+  justify-content: center;
+  text-align: left;
+  /* padding: min(7vw, 50rem) min(clamp(2rem, 4vw, 4.4rem), 2rem) min(25vw, 18rem); */
+}
+
+.list-horizontal-text li h4 {
+  font-size: min(2.2vw,var(--font-size-title));
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.list-horizontal-text li p {
+  font-size: min(2vw,var(--font-size-text));
+  line-height: 1.4;
+  opacity: .73;
+}
+
+.page3 {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
