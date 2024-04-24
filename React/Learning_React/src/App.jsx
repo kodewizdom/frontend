@@ -3,6 +3,8 @@ import React from "react";
 import Card from "./components/Card";
 import Song from "./components/Song";
 import State from "./components/State";
+import State1 from "./components/State1";
+import State2 from "./components/State2";
 
 function App() {
 
@@ -10,7 +12,9 @@ function App() {
     <div>
       {/* <Card/> */}
       {/* <Song/> */}
-      <State/>
+      {/* <State/> */}
+      {/* <State1/> */}
+      <State2/>
     </div>
   );
 }
