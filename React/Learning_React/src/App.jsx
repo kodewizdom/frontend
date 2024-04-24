@@ -2,13 +2,15 @@
 import React from "react";
 import Card from "./components/Card";
 import Song from "./components/Song";
+import State from "./components/State";
 
 function App() {
 
   return (
     <div>
       {/* <Card/> */}
-      <Song/>
+      {/* <Song/> */}
+      <State/>
     </div>
   );
 }
