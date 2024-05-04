@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const User = () => {
   // const navigate = useNavigate();
@@ -7,14 +8,30 @@ const User = () => {
   //   // console.log("hey");
   // };
   return (
-    <div className='bg-zinc-100 w-1/2 m-auto mt-10'>
-      <h3 className='text-5xl'>User</h3>
-      <p className="mb-2">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, tenetur
-        dolorum? Tenetur odio dolorum dolore voluptatum, molestias repellat
-        facere, fugit explicabo veritatis molestiae blanditiis in, cupiditate
-        eaque neque dolorem culpa?
-      </p>
+    <div className="bg-zinc-100 w-1/2 m-auto mt-10">
+      <h3 className="text-5xl">User</h3>
+      <div className="flex w-1/2 flex-col mt-5">
+        <Link
+          className="p-3 bg-red-200 hover:bg-red-400 text-2xl mb-3"
+          to="/user/john"
+        >
+          John
+        </Link>
+
+        <Link
+          className="p-3 bg-red-200 text-2xl mb-3 hover:bg-red-400"
+          to="/user/ayush"
+        >
+          Ayush
+        </Link>
+
+        <Link
+          className="p-3 bg-red-200 text-2xl mb-3 hover:bg-red-400"
+          to="/user/khan"
+        >
+          khan
+        </Link>
+      </div>
 
       <button
         // onClick={back}
@@ -23,7 +40,7 @@ const User = () => {
         Explore More
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default User
+export default User;
