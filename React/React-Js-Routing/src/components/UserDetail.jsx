@@ -11,7 +11,7 @@ const UserDetail = () => {
         navigate("/user");
     }
   return (
-    <div className=' w-1/2 m-auto mt-10'>
+    <div className=' m-auto mt-10'>
         <h1 className='text-5xl'>User Detail</h1>
 
         <h1 className='text-3xl'>Hi, {name}</h1>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const User = () => {
   // const navigate = useNavigate();
@@ -8,7 +8,7 @@ const User = () => {
   //   // console.log("hey");
   // };
   return (
-    <div className="bg-zinc-100 w-1/2 m-auto mt-10">
+    <div className=" w-1/2 m-auto mt-10">
       <h3 className="text-5xl">User</h3>
       <div className="flex w-1/2 flex-col mt-5">
         <Link
@@ -33,12 +33,9 @@ const User = () => {
         </Link>
       </div>
 
-      <button
-        // onClick={back}
-        className="px-3 py-1 bg-sky-500 text-sm text-white rounded-md"
-      >
-        Explore More
-      </button>
+      <hr/>
+      <hr/>
+      <Outlet/>
     </div>
   );
 };
