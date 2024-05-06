@@ -1,22 +1,43 @@
+import axios from "../utils/api";
 import React, { useEffect, useState } from "react";
 
 const Services = () => {
-  const [first, setFirst] = useState("This is normal data");
-  const [second, setSecond] = useState("This is very Large Data");
+  // const [first, setFirst] = useState("This is normal data");
+  // const [second, setSecond] = useState("This is very Large Data");
+  // useEffect(() => {
+  //   console.log("Services component is Created");
+
+  //   return () => {
+  //     console.log("Services component is Deleted");
+  //   };
+  // },[second]);
+
+  const getUsers = () => {
+    // const api = "https://fakestoreapi.com/users";
+
+    axios
+      .get("/users")
+      .then((users) => {
+        console.log(users);
+      })
+      .catch((err) => console.log(err.message));
+  };
 
   useEffect(() => {
-    console.log("Services component is Created");
+    getUsers();
 
     return () => {
-      console.log("Services component is Deleted");
+      console.log("Destroy Service Component");
     };
-  },[second]);
+  }, []);
+
+  
 
   return (
     <div>
       <h1>Services</h1>
 
-      <h3>{first}</h3>
+      {/* <h3>{first}</h3>
       <h4>{second}</h4>
       <button
         onClick={() => setFirst("change first data")}
@@ -29,7 +50,7 @@ const Services = () => {
         className="px-3 py-1 mx-4 rounded-sm text-white bg-orange-600 mt-10"
       >
         Change second data
-      </button>
+      </button> */}
     </div>
   );
 };

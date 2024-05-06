@@ -1,14 +1,14 @@
-import axios from "axios";
+import axios from "../utils/api";
 import React, { useEffect, useState } from "react";
 
 const Show = () => {
   const [products, setProducts] = useState([]);
 
   const getProduct = () => {
-    const api = "https://fakestoreapi.com/products";
+    // const api = "https://fakestoreapi.com/products";
 
     axios
-      .get(api)
+      .get("/products")
       .then((products) => {
         // console.log(products);
         setProducts(products.data);
